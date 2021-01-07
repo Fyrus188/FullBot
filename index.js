@@ -31,9 +31,9 @@ const nsfw = JSON.parse(fs.readFileSync('./src/nsfw.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
-            + 'FN:Fyrus Owner Bot\n' 
+            + 'FN:Bawaii\n' 
             + 'ORG: Pengembang XBot;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=6285226087964:+62 852 2608 7964\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=6282334297175:+62 823-3429-7175\n' 
             + 'END:VCARD' 
 prefix = '!'
 blocked = []          
@@ -46,10 +46,10 @@ const time = moment().tz('Asia/Jakarta').format("HH:mm:ss")
 const arrayBulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
 const bulan = arrayBulan[moment().format('MM') - 1]
 const config = {
-    XBOT: '❉AmpibI❉', 
-    instagram: 'https://instagram.com/affis_saputro123', 
-    nomer: 'wa.me/6282334297175',
-    youtube: 'https://youtube.com/channel/UCGYLWtyT9IADYNUiK0uZiGg', 
+    XBOT: '❉BotWaii❉', 
+    instagram: '(ComingSoon)', 
+    nomer: 'wa.me/6281351658537',
+    youtube: 'Bawaii', 
     whatsapp: 'Comming soon', 
     tanggal: `TANGGAL: ${moment().format('DD')} ${bulan} ${moment().format('YYYY')}`,
     waktu: time
@@ -167,7 +167,7 @@ client.on('group-participants-update', async (anu) => {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["6285226087964@s.whatsapp.net"] 
+			const ownerNumber = ["6281351658537@s.whatsapp.net"] 
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -204,10 +204,10 @@ client.on('group-participants-update', async (anu) => {
 			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			switch(command) {
-				case 'bisakah':
+				case 'ranklist':
 					bisakah = body.slice(1)
-					const bisa =['Bisa','Tidak Bisa','Coba Ulangi']
-					const keh = bisa[Math.floor(Math.random() * bisa.length)]
+					const bisa =['ranklist']
+					const keh = Vip,Vip+,Mvp,Mvp+[Math.floor(Math.random() * bisa.length)]
 					client.sendMessage(from, 'Pertanyaan : *'+bisakah+'*\n\nJawaban : '+ keh, text, { quoted: mek })
 					break
 				case 'kapankah':
@@ -397,7 +397,7 @@ client.on('group-participants-update', async (anu) => {
                          text: teks1,
                          contextInfo: {mentionedJid: [nomor]},
                      }
-                    client.sendMessage('6285226087964@s.whatsapp.net', options, text, {quoted: mek})
+                    client.sendMessage('62895710073737@s.whatsapp.net', options, text, {quoted: mek})
                     reply('Masalah telah di laporkan ke owner BOT, laporan palsu/main2 tidak akan ditanggapi.')
                     break
                 case 'ssweb':
@@ -841,7 +841,7 @@ client.on('group-participants-update', async (anu) => {
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (args[0] === 'buka') {
-					    reply(`𝗕𝗲𝗿𝗵𝗮𝘀𝗶𝗹 𝗠𝗲𝗺𝗯𝘂𝗸𝗮 𝗚𝗿𝗼𝘂𝗽 𝗧𝗼𝗱`)
+					    reply(`𝗕𝗲𝗿𝗵𝗮𝘀𝗶𝗹 𝗠??𝗺𝗯𝘂𝗸𝗮 𝗚𝗿𝗼𝘂𝗽 𝗧𝗼𝗱`)
 						client.groupSettingChange(from, GroupSettingChange.messageSend, false)
 					} else if (args[0] === 'tutup') {
 						reply(`𝗕𝗲𝗿𝗵𝗮𝘀𝗶𝗹 𝗠𝗲𝗻𝘂𝘁𝘂𝗽 𝗚𝗿𝗼𝘂𝗽 𝗧𝗼𝗱`)
@@ -1036,5 +1036,40 @@ client.on('group-participants-update', async (anu) => {
 					}
 		} catch (e) {
 			console.log('Error : %s', color(e, 'red'))
-		}
-	})
+	}
+}}
+else if (text == '!Ranklist'){
+conn.sendMessage(id, '  *[»] RANK ONEBLOCK*
+
+*VIP* : Harga 25k Via Pulsa Telkomsel | 15k Via Gopay Untuk Melihat Fitur Rank VIP . Silahkan Ketik = VIPob
+
+*VIP+* : Harga 50k Via Pulsa Telkomsel | 40k Via Gopay Untuk Melihat Fitur Rank VIP+ . Silahkan Ketik = VIPLob+
+
+*[»] RANK SKYGRID*
+
+*VIP* : Harga 20k Via Pulsa Telkomsel | 15k Via Gopay Untuk Melihat Fitur Rank VIP . Silahkan Ketik = VIPsky
+
+*VIP+* : Harga 40k Via Pulsa Telkomsel | 30k Via Gopay Untuk Melihat Fitur Rank VIP+ . Silahkan Ketik = VIPsky+
+
+*MVP* : Harga 70k Via Pulsa Telkomsel | 55k Via Gopay Untuk Melihat Fitur Rank MVP . Silahkan Ketik = MVPsky
+
+*MVP+* : Harga 150k Via Telkomsel | 130k Via Gopay Untuk Melihat Fitur MVP+ . Silahkan Ketik = MVPsky+
+
+*MVP++* : Harga 200k Via Telkomsel | 180k Via Gopay Untuk Melihat Fitur MVP++ . Silahkan Ketik = MVPsky++
+
+*[»] RANK RAFT SURVIVAL*
+
+*VIP* : Harga 20k Via Pulsa Telkomsel | 15k Via Gopay Untuk Melihat Fitur Rank VIP . Silahkan Ketik = VIPraft
+
+*VIP+* : Harga 40k Via Pulsa Telkomsel | 30k Via Gopay Untuk Melihat Fitur Rank VIP+ . Silahkan Ketik = VIPLraft+
+
+*MVP* : Harga 70k Via Pulsa Telkomsel | 55k Via Gopay Untuk Melihat Fitur Rank MVP . Silahkan Ketik = MVPraft
+
+*MVP+* : Harga 150k Via Telkomsel | 130k Via Gopay Untuk Melihat Fitur MVP+ . Silahkan Ketik = MVPraft+
+
+*MVP++* : Harga 200k Via Telkomsel | 180k Via Gopay Untuk Melihat Fitur MVP++ . Silahkan Ketik = MVPLraft++! ' ,MessageType.text);
+}
+}
+else if (text == '!Belirank'){
+conn.sendMessage(id, 'Mau beli rank?' ,MessageType.text);
+}
